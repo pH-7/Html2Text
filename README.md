@@ -48,7 +48,7 @@ echo $plainText;
 
 **[Pierre-Henry Soria](https://ph7.me)**, a highly passionate, zen &amp; pragmatic software engineer 😊
 
-️☕️ Are you enjoying it? **[Offer me a coffee](https://ko-fi.com/phenry)** and boost the software development at the same time! 💪
+️☕️ Are you enjoying it...? You could **[offer me a coffee](https://ko-fi.com/phenry)** if you wish 😋
 
 
 ## ⚖️ License
