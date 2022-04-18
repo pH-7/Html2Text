@@ -1,0 +1,36 @@
+{
+  "name": "ph-7/html-to-text",
+  "description": "Lightweight package to convert HTML code to plain text.",
+  "keywords": [
+    "text",
+    "html",
+    "html2text",
+    "html to text",
+    "plain text",
+    "convert"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/pH-7",
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "PH7\\HtmlToText\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Pierre-Henry Soria",
+      "email": "hi@ph7.me",
+      "homepage": "https://ph7.me"
+    }
+  ],
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}

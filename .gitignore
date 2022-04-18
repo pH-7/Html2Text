@@ -1,0 +1,17 @@
+# Dependencies
+/vendor
+composer.lock
+
+# Tests
+phpunit.xml
+.phpunit.result.cache
+
+# IDE - PHPStorm
+/.idea
+
+# TMP files
+*.log
+*~
+*.swp
+.directory
+.DS_Store*
