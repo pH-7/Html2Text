@@ -22,11 +22,14 @@ class Convert
 
     public function __construct(string $htmlCode)
     {
-        $oDom = new DOMDocument();
-        $oDom->loadHTML($htmlCode);
-        $this->htmlCode = trim($oDom->textContent);
+        $this->htmlCode = $htmlCode;
 
         $this->convertHtmlEntities();
+
+        $oDom = new DOMDocument();
+        $oDom->loadHTML($this->htmlCode);
+        $this->htmlCode = trim($oDom->textContent);
+
         $this->parse();
     }
 

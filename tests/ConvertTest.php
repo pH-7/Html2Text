@@ -20,9 +20,7 @@ final class ConvertTest extends TestCase
 This is a paragraph.
 TEXT;
 
-        $this->html2Text = new Html2Text($htmlCode);
-        $actual = $this->html2Text->getText();
-
+        $actual = (new Html2Text($htmlCode))->getText();
         $this->assertSame($expectedOutput, $actual);
     }
 
@@ -51,9 +49,16 @@ Document
 Hello World.
 TEXT;
 
-        $this->html2Text = new Html2Text($htmlDocument);
-        $actual = $this->html2Text->getText();
+        $actual = (new Html2Text($htmlDocument))->getText();
 
         $this->assertSame($expectedOutput, $actual);
+    }
+
+    public function testHtmlCodeContainingHtmlEntities(): void
+    {
+        $htmlCode = 'Hi&#44;&nbsp;You';
+        $actual = (new Html2Text($htmlCode))->getText();
+
+        $this->assertSame('Hi, You', $actual);
     }
 }
