@@ -1,12 +1,12 @@
 # HTML to Plain Text
 
-A very simple "**HTML to Plain Text**" convertor 🪄
+A simple lightweight "**HTML to Plain Text**" convertor 🪄
 
 ## 📄 Overview
 
 [![Ko Fi - Offer Me A Coffee](media/kofi-logo.png)](https://ko-fi.com/phenry)
 
-**Simplest. Clean. Efficient.** Just what you need to convert HTML code into plain text 🧹
+**Simple. Clean. Efficient.** Just what you need to convert HTML code into plain text 🧹
 
 ## 🐘 PHP Requirement
 
