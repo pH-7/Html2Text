@@ -1,6 +1,6 @@
 # HTML to Plain Text
 
-A very simple "HTML to plain text" convertor.
+A very simple "**HTML to Plain Text**" convertor 🪄
 
 ## 📄 Overview
 
