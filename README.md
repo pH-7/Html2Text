@@ -51,6 +51,11 @@ echo $plainText;
 ️☕️ Are you enjoying it...? You could **[offer me a coffee](https://ko-fi.com/phenry)** if you wish 😋
 
 
+## Projects using it 🚀
+
+* [pH7Builder](https://github.com/pH7Software/pH7-Social-Dating-CMS) - [composer.json](https://github.com/pH7Software/pH7-Social-Dating-CMS/blob/99e16af40cbc9bb4de64d1c32e5c49f54a4717c2/composer.json#L73)
+
+
 ## ⚖️ License
 
 **HTML to Text** is generously distributed under _[MIT](https://opensource.org/licenses/MIT)_ 🎉 Enjoy!
