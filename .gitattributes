@@ -1,3 +1,4 @@
+# Files/folders to exclude for package distribution
 /tests export-ignore
 /.github export-ignore
 /media export-ignore
