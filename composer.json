@@ -7,7 +7,9 @@
     "html2text",
     "html to text",
     "plain text",
-    "convert"
+    "convert",
+    "converter",
+    "convertor"
   ],
   "type": "library",
   "license": "MIT",
