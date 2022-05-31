@@ -1,6 +1,6 @@
 {
   "name": "ph-7/html-to-text",
-  "description": "Lightweight package to convert HTML code to plain text.",
+  "description": "Lightweight package to convert HTML code to plain text (handy for plain text email format).",
   "keywords": [
     "text",
     "html",
