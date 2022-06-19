@@ -1,6 +1,7 @@
 # HTML to Plain Text
 
-A simple lightweight "**HTML to Plain Text**" convertor 🪄
+A simple lightweight "**HTML to Plain Text**" converter 🪄
+
 
 ## 📄 Overview
 
@@ -8,9 +9,10 @@ A simple lightweight "**HTML to Plain Text**" convertor 🪄
 
 **Simple. Clean. Efficient.** Just what you need to convert HTML code into plain text 🧹
 
+
 ## 🐘 PHP Requirement
 
-[PHP v7.4](https://www.php.net/releases/7_4_0.php) or newer.
+* [PHP v7.4](https://www.php.net/releases/7_4_0.php) or newer.
 
 
 ## 🛠 Installation
@@ -46,7 +48,7 @@ echo $plainText;
 
 [![@phenrysay][twitter-image]](https://twitter.com/phenrysay) [![pH-7][github-image]](https://github.com/pH-7)
 
-**[Pierre-Henry Soria](https://ph7.me)**, a highly passionate, zen &amp; pragmatic software engineer 😊
+**[Pierre-Henry Soria](https://ph7.me)**. A super passionate, zen &amp; pragmatic software engineer 😊 Cheese & dark chocolate lover! 🧀🍫😋
 
 ️☕️ Are you enjoying it...? You could **[offer me a coffee](https://ko-fi.com/phenry)** if you wish 😋
 
