@@ -1,6 +1,6 @@
 # HTML to Plain Text
 
-A simple lightweight "**HTML to Plain Text**" converter 🪄
+A simple, lightweight, and effective "**HTML to Plain Text**" converter for your PHP projects 🪄
 
 
 ## 📄 Overview
