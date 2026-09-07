@@ -119,4 +119,16 @@ TEXT;
         ];
     }
 
+    public function testLinkAttributesAreNotIncludedInTheUrl(): void
+    {
+        $html = '<a href="https://example.com/" class="cta">Read</a>';
+        $this->assertSame('Read (https://example.com/)', (new Html2Text($html))->getText());
+    }
+
+    public function testLinkQuotesAndAttributeSpacing(): void
+    {
+        $html = "<A target='_blank' HREF = 'https://example.com/?a=1&amp;b=2' rel='noreferrer'>Go</A>";
+        $this->assertSame('Go (https://example.com/?a=1&b=2)', (new Html2Text($html))->getText());
+    }
+
 }

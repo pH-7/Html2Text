@@ -25,7 +25,7 @@ class Convert
         '/\s+/' => ' ',
 
         // Display link anchor with URL in parentheses
-        '/<a(.*)href=[\'"](.*)[\'"]>(.*)<\/a>/Uis' => '$3 ($2)',
+        '/<a\b[^>]*\shref\s*=\s*([\'"])(.*?)\1[^>]*>(.*?)<\/a\s*>/is' => '$3 ($2)',
 
         // Replace <hr /> to newline
         '/<hr(.*)>/Uis' => "\n",
