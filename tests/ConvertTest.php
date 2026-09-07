@@ -85,4 +85,21 @@ TEXT;
 
         $this->assertSame('Hi, You', $actual);
     }
+    public function testBodyPreservesParagraphStructure(): void
+    {
+        $html = '<body><p>One</p><p>Two</p></body>';
+        $this->assertSame("One\n\nTwo", (new Html2Text($html))->getText());
+    }
+
+    public function testBodyPreservesUtf8WithoutCharsetMetadata(): void
+    {
+        $this->assertSame('café 🧀', (new Html2Text('<body><p>café 🧀</p></body>'))->getText());
+    }
+
+    public function testUppercaseBodyExcludesTheHead(): void
+    {
+        $html = '<HTML><HEAD><TITLE>Hidden title</TITLE></HEAD><BODY><P>Visible</P></BODY></HTML>';
+        $this->assertSame('Visible', (new Html2Text($html))->getText());
+    }
+
 }

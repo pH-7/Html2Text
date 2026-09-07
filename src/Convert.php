@@ -69,11 +69,21 @@ class Convert
     {
         $this->htmlCode = $htmlCode;
 
-        if (preg_match('/<body(.*)>/', $this->htmlCode)) {
+        if (preg_match('/<body\b[^>]*>/i', $this->htmlCode)) {
             $dom = new DOMDocument();
-            $dom->loadHTML($this->htmlCode);
+            // Explicit UTF-8 avoids the legacy HTML parser's fallback encoding.
+            $dom->loadHTML(
+                '<?xml encoding="' . self::ENCODING . '"?>' . $this->htmlCode,
+                LIBXML_NONET | LIBXML_NOERROR | LIBXML_NOWARNING
+            );
 
-            $this->htmlCode = $dom->getElementsByTagName('body')->item(0)->textContent;
+            $body = $dom->getElementsByTagName('body')->item(0);
+            if ($body !== null) {
+                $this->htmlCode = '';
+                foreach ($body->childNodes as $child) {
+                    $this->htmlCode .= $dom->saveHTML($child);
+                }
+            }
         }
 
         $this->convertHtmlEntities();
