@@ -102,4 +102,21 @@ TEXT;
         $this->assertSame('Visible', (new Html2Text($html))->getText());
     }
 
+    /** @dataProvider encodedTextCases */
+    public function testEncodedTextRemainsLiteral(string $html, string $expected): void
+    {
+        $this->assertSame($expected, (new Html2Text($html))->getText());
+    }
+
+    public static function encodedTextCases(): array
+    {
+        return [
+            ['Use &lt;code&gt; literally', 'Use <code> literally'],
+            ['<body>Use &lt;code&gt; literally</body>', 'Use <code> literally'],
+            ['&amp;lt;strong&amp;gt;', '&lt;strong&gt;'],
+            ['<body>&amp;lt;strong&amp;gt;</body>', '&lt;strong&gt;'],
+            ['&nbsp;Hi&#160;there&#xA0;', 'Hi there'],
+        ];
+    }
+
 }

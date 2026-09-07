@@ -86,9 +86,8 @@ class Convert
             }
         }
 
-        $this->convertHtmlEntities();
-
         $this->parse();
+        $this->convertHtmlEntities();
     }
 
     private function parse(): void
@@ -112,11 +111,12 @@ class Convert
 
     private function convertHtmlEntities(): void
     {
-        $this->htmlCode = str_replace('&nbsp;', ' ', $this->htmlCode);
-        $this->htmlCode = html_entity_decode($this->htmlCode, ENT_QUOTES | ENT_COMPAT , self::ENCODING);
-        $this->htmlCode = html_entity_decode($this->htmlCode, ENT_HTML5, self::ENCODING);
-        $this->htmlCode = html_entity_decode($this->htmlCode);
-        $this->htmlCode = htmlspecialchars_decode($this->htmlCode);
+        $this->plainText = html_entity_decode(
+            $this->plainText,
+            ENT_QUOTES | ENT_HTML5 | ENT_SUBSTITUTE,
+            self::ENCODING
+        );
+        $this->plainText = trim(str_replace("\u{00A0}", ' ', $this->plainText));
     }
 
     public function getText(): string
