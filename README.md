@@ -13,6 +13,7 @@ A simple, lightweight, and effective "**HTML to Plain Text**" converter for your
 ## 🐘 PHP Requirement
 
 * [PHP v7.4](https://www.php.net/releases/7_4_0.php) or newer.
+* PHP DOM extension, used to extract full HTML document bodies.
 
 
 ## 🛠 Installation
