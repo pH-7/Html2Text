@@ -43,6 +43,11 @@ echo $plainText;
 ```
 
 
+`getText()` returns plain text, which can contain literal `<` and `>` characters.
+Escape it with `htmlspecialchars($plainText, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')`
+when embedding it in an HTML page. This converter is not an HTML sanitiser.
+Full-document parsing uses PHP's legacy [DOMDocument HTML parser](https://www.php.net/manual/en/domdocument.loadhtml.php), so malformed or modern HTML can have parser-specific edge cases.
+
 ## 😋 Who cooked it?
 
 [![Pierre-Henry Soria](https://s.gravatar.com/avatar/a210fe61253c43c869d71eaed0e90149?s=200)](https://ph7.me 'Pierre-Henry Soria personal website')
